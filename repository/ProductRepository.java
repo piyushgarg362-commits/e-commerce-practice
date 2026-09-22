@@ -1,14 +1,11 @@
-package com.bringways.ecommerce.repository;
+package com.bringways.ecommerce;
 
-import com.bringways.ecommerce.entity.Product;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.util.List;
-
-public interface ProductRepository
-        extends JpaRepository<Product, Long> {
-
-    List<Product> findByCategory(String category);
-
-    List<Product> findByNameContainingIgnoreCase(String name);
+@SpringBootApplication
+public class BringwaysEcommerceApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(BringwaysEcommerceApplication.class, args);
+    }
 }
